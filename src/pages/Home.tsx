@@ -3,8 +3,11 @@ import PersonalInfo from '../components/resume/PersonalInfo';
 import Skills from '../components/resume/Skills';
 import Hobbies from '../components/resume/Hobbies';
 import Summary from '../components/resume/Summary';
+import JobIntention from '../components/resume/JobIntention';
+import CoreAdvantages from '../components/resume/CoreAdvantages';
 import WorkExperience from '../components/resume/WorkExperience';
 import ProjectExperience from '../components/resume/ProjectExperience';
+import Certifications from '../components/resume/Certifications';
 import Education from '../components/resume/Education';
 import resumeData from '../lib/resumeData.json';
 
@@ -36,17 +39,22 @@ export default function Home() {
               </div>
               
               {/* 个人信息 */}
-              <PersonalInfo 
+              <PersonalInfo
                 name={resumeData.personalInfo.name}
                 email={resumeData.personalInfo.email}
                 phone={resumeData.personalInfo.phone}
                 address={resumeData.personalInfo.address}
                 website={resumeData.personalInfo.website}
               />
-              
+
               {/* 技能 */}
               <Skills skills={resumeData.skills} />
-              
+
+              {/* 专业认证 */}
+              <div className="px-2">
+                <Certifications certifications={resumeData.certifications} />
+              </div>
+
               {/* 爱好 */}
               <Hobbies hobbies={resumeData.hobbies} />
             </div>
@@ -56,6 +64,16 @@ export default function Home() {
               {/* 个人简介 */}
               <div id="summary">
                 <Summary summary={resumeData.summary} />
+              </div>
+
+              {/* 求职意向 */}
+              <div id="jobIntention">
+                <JobIntention jobIntention={resumeData.jobIntention} />
+              </div>
+
+              {/* 核心优势 */}
+              <div id="coreAdvantages">
+                <CoreAdvantages coreAdvantages={resumeData.coreAdvantages} />
               </div>
 
               {/* 工作经历 */}

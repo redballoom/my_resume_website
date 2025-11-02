@@ -1,4 +1,6 @@
 import React from 'react';
+import SectionTitle from '@/components/ui/SectionTitle';
+import { tw } from '@/lib/tokens';
 
 interface HobbiesProps {
   hobbies: string[];
@@ -6,13 +8,15 @@ interface HobbiesProps {
 
 const Hobbies: React.FC<HobbiesProps> = ({ hobbies }) => {
   return (
-    <div className="w-full">
-      <h2 className="text-xl font-bold mb-4 border-b border-gray-300 pb-2">爱好</h2>
+    <div className={tw.spacing.section}>
+      <SectionTitle level="h2" accent="primary">
+        爱好
+      </SectionTitle>
       <div className="space-y-2">
         {hobbies.map((hobby, index) => (
           <p key={index} className="flex items-center">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-700 mr-2"></span>
-            {hobby}
+            <span className="inline-block w-2 h-2 rounded-full bg-primary-700 mr-2"></span>
+            <span className="text-sm text-gray-700">{hobby}</span>
           </p>
         ))}
       </div>

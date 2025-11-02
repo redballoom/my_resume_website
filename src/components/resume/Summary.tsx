@@ -1,4 +1,6 @@
 import React from 'react';
+import SectionTitle from '@/components/ui/SectionTitle';
+import { tw } from '@/lib/tokens';
 
 interface SummaryProps {
   summary: string;
@@ -6,9 +8,11 @@ interface SummaryProps {
 
 const Summary: React.FC<SummaryProps> = ({ summary }) => {
   return (
-    <section className="mb-8">
-      <h2 className="text-2xl font-bold mb-4 text-blue-800 border-b-2 border-gray-200 pb-2">个人简介</h2>
-      <p className="text-gray-700 leading-relaxed">
+    <section className={tw.spacing.section}>
+      <SectionTitle level="h2" accent="primary">
+        个人简介
+      </SectionTitle>
+      <p className={tw.text.body}>
         {summary}
       </p>
     </section>
