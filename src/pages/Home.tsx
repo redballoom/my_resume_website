@@ -13,7 +13,7 @@ import resumeData from '../lib/resumeData.json';
 
 export default function Home() {
   return (
-    <div id="home" className="min-h-screen bg-gray-100 pt-20 pb-8 px-4 sm:pt-8 sm:px-6">
+    <div id="home" className="min-h-screen bg-gray-100 pt-4 pb-8 px-4 sm:pt-8 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="flex flex-col md:flex-row">
