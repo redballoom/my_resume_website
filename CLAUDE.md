@@ -1,0 +1,3 @@
+- 使用中文回复
+- 远程github仓库地址：git@github.com:redballoom/my_resume_website.git
+- 每次git push前向用户确定操作
